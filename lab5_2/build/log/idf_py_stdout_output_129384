@@ -1,0 +1,87 @@
+Command: /home/ubuntu/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/ubuntu/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/ubuntu/Projects/lab5/lab5_2/build/oneshot_read.elf /home/ubuntu/Projects/lab5/lab5_2/build/bootloader/bootloader.elf -m '/home/ubuntu/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/ubuntu/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (120) esp_image: segment 4: paddr=00034814 vaddr=403874a8 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403821b8
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15c0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2ff0
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5-dev-3510-gaaebc37467 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 12 2025 19:44:27[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (26) boot: efuse block revision: v1.3[0m
+[0;32mI (30) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=079ach ( 31148) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=000179d4 vaddr=3fc8b800 size=01194h (  4500) load[0m
+[0;32mI (93) esp_image: segment 2: paddr=00018b70 vaddr=40380000 size=074a8h ( 29864) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=147ech ( 83948) map[0m
+[0;32mI (120) esp_image: segment 4: paddr=00034814 vaddr=403874a8 size=04260h ( 16992) load[0m
+[0;32mI (124) esp_image: segment 5: paddr=00038a7c vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (128) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (129) boot: Disabling RNG early entropy source...[0m
+[0;32mI (145) cpu_start: Unicore app[0m
+[0;32mI (154) cpu_start: Pro cpu start user code[0m
+[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (154) app_init: Application information:[0m
+[0;32mI (154) app_init: Project name:     oneshot_read[0m
+[0;32mI (158) app_init: App version:      9c931ad-dirty[0m
+[0;32mI (163) app_init: Compile time:     May 12 2025 19:44:01[0m
+[0;32mI (168) app_init: ELF file SHA256:  fbc836d93...[0m
+[0;32mI (172) app_init: ESP-IDF:          v5.5-dev-3510-gaaebc37467[0m
+[0;32mI (178) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (181) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (185) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (189) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (196) heap_init: At 3FC8D880 len 00032780 (201 KiB): RAM[0m
+[0;32mI (201) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (207) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (213) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (219) spi_flash: detected chip: generic[0m
+[0;32mI (222) spi_flash: flash io: dio[0m
+[0;33mW (225) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (237) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (243) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (250) main_task: Started on CPU0[0m
+[0;32mI (250) main_task: Calling app_main()[0m
+[0;32mI (250) EXAMPLE: calibration scheme version is Curve Fitting[0m
+[0;32mI (260) EXAMPLE: Calibration Success[0m
+[0;32mI (260) EXAMPLE: calibration scheme version is Curve Fitting[0m
+[0;32mI (270) EXAMPLE: Calibration Success[0m
+[0;32mI (1770) EXAMPLE: WORD ENDED[0m
+[0;32mI (3370) EXAMPLE: WORD ENDED[0m
+[0;32mI (4970) EXAMPLE: WORD ENDED[0m
+[0;32mI (6570) EXAMPLE: WORD ENDED[0m
+[0;32mI (7870) EXAMPLE: DOT DETECTED[0m
+[0;32mI (8470) EXAMPLE: DOT DETECTED[0m
+[0;32mI (9070) EXAMPLE: DOT DETECTED[0m
+[0;32mI (9670) EXAMPLE: DOT DETECTED[0m
+[0;32mI (10570) EXAMPLE: DECODING...[0m
+[0;32mI (10570) EXAMPLE: H[0m
+[0;32mI (11070) EXAMPLE: DOT DETECTED[0m
+[0;32mI (11670) EXAMPLE: DOT DETECTED[0m
+[0;32mI (12570) EXAMPLE: DECODING...[0m
+[0;32mI (12570) EXAMPLE: I[0m
+[0;32mI (14170) EXAMPLE: WORD ENDED[0m
+[0;32mI (15770) EXAMPLE: WORD ENDED[0m
+[0;32mI (17370) EXAMPLE: WORD ENDED[0m
+[0;32mI (18970) EXAMPLE: WORD ENDED[0m
+[0;32mI (20570) EXAMPLE: WORD ENDED[0m
+[0;32mI (22170) EXAMPLE: WORD ENDED[0m
+[0;32mI (23770) EXAMPLE: WORD ENDED[0m
+[0;32mI (25370) EXAMPLE: WORD ENDED[0m
+[0;32mI (26970) EXAMPLE: WORD ENDED[0m
+[0;32mI (28570) EXAMPLE: WORD ENDED[0m
+[0;32mI (30170) EXAMPLE: WORD ENDED[0m
+[0;32mI (31770) EXAMPLE: WORD ENDED[0m
