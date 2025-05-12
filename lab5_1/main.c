@@ -10,7 +10,7 @@
 #endif
 #define chipname "gpiochip0"
 #define line_num 17
-#define UNIT 200000 // 2000000 microseconds = 200ms
+#define UNIT 20000 // 2000000 microseconds = 200ms
 
 const char *morse_table[128] = {
     ['A'] = ".-",    ['B'] = "-...",  ['C'] = "-.-.", ['D'] = "-..",
@@ -34,10 +34,10 @@ void flash_symbol(struct gpiod_line *line, char symbol) {
         usleep(UNIT);
     } else if (symbol == '-') {
         gpiod_line_set_value(line, 1);
-        usleep(UNIT * 3);
+        usleep(UNIT * 5);
     }
     gpiod_line_set_value(line, 0);
-    usleep(2 * UNIT);  // space between symbols
+    usleep(UNIT * 3);  // space between symbols
 }
 
 void send_morse (struct gpiod_line *line, const char *message, int repeat) {
@@ -48,16 +48,16 @@ void send_morse (struct gpiod_line *line, const char *message, int repeat) {
             if (!code) continue;
 
             if (strcmp(code, "/") == 0) {
-                usleep(UNIT * 7);  // space between words
+                usleep(UNIT * 11);  // space between words
                 continue;
             }
 
             for (size_t j = 0; j < strlen(code); j++) {
                 flash_symbol(line, code[j]);
             }
-            usleep(UNIT * 4);  // space between letters
+            usleep(UNIT * 7);  // space between letters
         }
-        usleep(UNIT * 7);  // space between repeats
+        usleep(UNIT * 11);  // space between repeats
     }
 }
 

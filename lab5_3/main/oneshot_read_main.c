@@ -51,15 +51,15 @@ const static char *TAG = "EXAMPLE";
 static int adc_raw[2][10];
 static int voltage[2][10];
 
-#define UNIT_MICRO 200000
+#define UNIT_MICRO 20000
 #define UNIT UNIT_MICRO / 1000
 #define DOT_DURATION_MS 1 * UNIT
-#define SYMBOL_DURATION_MS 2 * UNIT
-#define DASH_DURATION_MS 3 * UNIT
-#define LETTER_GAP_MS 4 * UNIT
-#define WORD_GAP_MS 7 * UNIT
+#define SYMBOL_DURATION_MS 3 * UNIT
+#define DASH_DURATION_MS 5 * UNIT
+#define LETTER_GAP_MS 7 * UNIT
+#define WORD_GAP_MS 11 * UNIT
 
-#define THRESHOLD_MV 110 // Adjust this experimentally
+#define THRESHOLD_MV 120 // Adjust this experimentally
 
 typedef struct {
   const char *morse;
@@ -141,7 +141,7 @@ char print_morse(adc_oneshot_unit_handle_t adc_handle,
       word_index = 0;
       word[0] = '\0';
     }
-    vTaskDelay(pdMS_TO_TICKS(100));
+    vTaskDelay(pdMS_TO_TICKS(UNIT / 2));//
   }
 }
 
@@ -204,7 +204,7 @@ void app_main(void) {
     letter_index[i] = letter;
     i++;
     // ESP_LOGI(TAG, "WORD IS %s", letter_index);
-    vTaskDelay(pdMS_TO_TICKS(100));
+    vTaskDelay(pdMS_TO_TICKS(UNIT / 2));
   }
 
   // Tear Down
