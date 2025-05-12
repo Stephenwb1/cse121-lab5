@@ -1,4 +1,4 @@
-PROJ=main
+PROJ=send
 CC=cc
 SRC=main.c
 LIBS=-lgpiod
