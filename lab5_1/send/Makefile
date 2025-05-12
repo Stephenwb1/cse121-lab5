@@ -1,6 +1,6 @@
 PROJ=send
 CC=cc
-SRC=main.c
+SRC=send.c
 LIBS=-lgpiod
 CFLAGS=-D CONSUMER=\"$(PROJ)\"
 
